@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CxXMLResults InitiatorName="Sean Matthiesen" Owner="ematthiesen@outlook.com" ScanId="1005206" ProjectId="3237" ProjectName="ahotjavamess" TeamFullPathOnReportDate="CxServer\SP\America\Rob-Sandbox" DeepLink="https://cxprivatecloud.checkmarx.net/CxWebClient/ViewerMain.aspx?scanid=1005206&amp;projectid=3237" ScanStart="Sunday, April 30, 2017 12:47:42 PM" Preset="Default" ScanTime="00h:01m:00s" LinesOfCodeScanned="36" FilesScanned="6" ReportCreationTime="Sunday, April 30, 2017 12:48:51 PM" Team="Rob-Sandbox" CheckmarxVersion="8.4.2" ScanComments="" ScanType="Full" SourceOrigin="LocalPath" Visibility="Public">
+  <Query id="591" categories="PCI DSS v3.1;PCI DSS (3.1) - 6.5.7 - Cross-site scripting (XSS),OWASP Top 10 2013;A3-Cross-Site Scripting (XSS)" cweId="79" name="Reflected_XSS_All_Clients" group="Java_High_Risk" Severity="High" Language="Java" LanguageHash="5833026011574115" LanguageChangeDate="2017-04-09T00:00:00.0000000" SeverityIndex="3" QueryPath="Java\Cx\Java High Risk\Reflected XSS All Clients Version:2" QueryVersionCode="56121123">
+    <Result NodeId="10052060002" FileName="/WebContent/xss.jsp" Status="New" Line="10" Column="377" FalsePositive="False" Severity="High" AssignToUser="" state="0" Remark="" DeepLink="https://cxprivatecloud.checkmarx.net/CxWebClient/ViewerMain.aspx?scanid=1005206&amp;projectid=3237&amp;pathid=2" SeverityIndex="3">
+      <Path ResultId="1005206" PathId="2" SimilarityId="2119735473">
+        <PathNode>
+          <FileName>/WebContent/xss.jsp</FileName>
+          <Line>10</Line>
+          <Column>377</Column>
+          <NodeId>1</NodeId>
+          <Name>""user_input""</Name>
+          <Type></Type>
+          <Length>12</Length>
+          <Snippet>
+            <Line>
+              <Number>10</Number>
+              <Code> &lt;%= request.getParameter("user_input") %&gt;</Code>
+            </Line>
+          </Snippet>
+        </PathNode>
+        <PathNode>
+          <FileName>/WebContent/xss.jsp</FileName>
+          <Line>10</Line>
+          <Column>376</Column>
+          <NodeId>2</NodeId>
+          <Name>getParameter</Name>
+          <Type></Type>
+          <Length>1</Length>
+          <Snippet>
+            <Line>
+              <Number>10</Number>
+              <Code> &lt;%= request.getParameter("user_input") %&gt;</Code>
+            </Line>
+          </Snippet>
+        </PathNode>
+      </Path>
+    </Result>
+  </Query>
+  <Query id="2344" categories="PCI DSS v3.1;PCI DSS (3.1) - 6.5.7 - Cross-site scripting (XSS),OWASP Top 10 2013;A3-Cross-Site Scripting (XSS)" cweId="10706" name="HttpOnlyCookies_In_Config" group="Java_Medium_Threat" Severity="Medium" Language="Java" LanguageHash="5833026011574115" LanguageChangeDate="2017-04-09T00:00:00.0000000" SeverityIndex="2" QueryPath="Java\Cx\Java Medium Threat\HttpOnlyCookies In Config Version:1" QueryVersionCode="76215686">
+    <Result NodeId="10052060001" FileName="/WebContent/WEB-INF/web.xml" Status="New" Line="1" Column="301" FalsePositive="False" Severity="Medium" AssignToUser="" state="0" Remark="" DeepLink="https://cxprivatecloud.checkmarx.net/CxWebClient/ViewerMain.aspx?scanid=1005206&amp;projectid=3237&amp;pathid=1" SeverityIndex="2">
+      <Path ResultId="1005206" PathId="1" SimilarityId="-719048849">
+        <PathNode>
+          <FileName>/WebContent/WEB-INF/web.xml</FileName>
+          <Line>1</Line>
+          <Column>301</Column>
+          <NodeId>1</NodeId>
+          <Name>CxXmlConfigClass666302324</Name>
+          <Type></Type>
+          <Length>6</Length>
+          <Snippet>
+            <Line>
+              <Number>1</Number>
+              <Code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</Code>
+            </Line>
+          </Snippet>
+        </PathNode>
+      </Path>
+    </Result>
+  </Query>
+  <Query id="604" categories="PCI DSS v3.1;PCI DSS (3.1) - 6.5.10 - Broken authentication and session management,OWASP Top 10 2013;A2-Broken Authentication and Session Management" cweId="259" name="Use_Of_Hardcoded_Password" group="Java_Low_Visibility" Severity="Low" Language="Java" LanguageHash="5833026011574115" LanguageChangeDate="2017-04-09T00:00:00.0000000" SeverityIndex="1" QueryPath="Java\Cx\Java Low Visibility\Use Of Hardcoded Password Version:2" QueryVersionCode="56258923">
+    <Result NodeId="10052060003" FileName="/WebContent/login.jsp" Status="New" Line="10" Column="358" FalsePositive="False" Severity="Low" AssignToUser="" state="0" Remark="" DeepLink="https://cxprivatecloud.checkmarx.net/CxWebClient/ViewerMain.aspx?scanid=1005206&amp;projectid=3237&amp;pathid=3" SeverityIndex="1">
+      <Path ResultId="1005206" PathId="3" SimilarityId="10387468">
+        <PathNode>
+          <FileName>/WebContent/login.jsp</FileName>
+          <Line>10</Line>
+          <Column>358</Column>
+          <NodeId>1</NodeId>
+          <Name>password</Name>
+          <Type></Type>
+          <Length>8</Length>
+          <Snippet>
+            <Line>
+              <Number>10</Number>
+              <Code>&lt;% String password="my_password"; %&gt;</Code>
+            </Line>
+          </Snippet>
+        </PathNode>
+      </Path>
+    </Result>
+  </Query>
+</CxXMLResults>
